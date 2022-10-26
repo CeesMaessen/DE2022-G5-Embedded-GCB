@@ -13,7 +13,7 @@ class HeartAttackPredictor:
         print(prediction_input)
         cat_cols = ['sex','exng','caa','cp','fbs','restecg','slp','thall']
         con_cols = ["age","trtbps","chol","thalachh","oldpeak"]
-        catvals = [0,1,2,3]
+        catvals = [0,1,2,3,4]
 
         model_name = os.environ.get('MODEL_NAME', 'Specified environment variable is not set.')
         if self.model is None:
@@ -23,7 +23,7 @@ class HeartAttackPredictor:
 
         df_dummified = pd.get_dummies(df[cat_cols].astype(pd.CategoricalDtype(categories=catvals)))
         df = pd.concat([df, df_dummified], axis = 1)
-        cols_to_drop = cat_cols + ['sex_0','sex_2','sex_3','exng_0','exng_2','exng_3','caa_0','cp_0','fbs_0','fbs_2', 'fbs_3','restecg_0','restecg_3', 'slp_0', 'slp_3', 'thall_0']
+        cols_to_drop = cat_cols + ['sex_0','sex_2','sex_3','sex_4','exng_0','exng_2','exng_3','exng_4','caa_0','cp_0','cp_4','fbs_0','fbs_2', 'fbs_3','fbs_4','restecg_0','restecg_3','restecg_4','slp_0', 'slp_3','slp_4', 'thall_0','thall_4']
         df = df.drop(columns = cols_to_drop)
 
         # instantiate the scaler
