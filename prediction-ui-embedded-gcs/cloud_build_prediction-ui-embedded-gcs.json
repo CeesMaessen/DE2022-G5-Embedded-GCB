@@ -4,7 +4,7 @@
        "name": "gcr.io/cloud-builders/gsutil",
        "args": [
            "cp",
-		"gs://dmodel_a1/svc_model.h5",
+		"gs://data_cees/svc_model.h5",
            "./prediction-ui-embedded-gcs"
         ]
     },
@@ -14,7 +14,7 @@
       "args": [
         "build",
         "-t",
-        "gcr.io/de2022-rrd/prediction-ui-embedded-gcs:9.9.9",
+        "gcr.io/data-engineering-jads/prediction-ui-embedded-gcs:9.9.9",
         "./prediction-ui-embedded-gcs"
       ]
     },
@@ -22,7 +22,7 @@
       "name": "gcr.io/cloud-builders/docker",
       "args": [
         "push",
-        "gcr.io/de2022-rrd/prediction-ui-embedded-gcs:9.9.9"
+        "gcr.io/data-engineering-jads/prediction-ui-embedded-gcs:9.9.9"
       ]
     },
     {
@@ -33,9 +33,9 @@
         "deploy",
         "prediction-service",
         "--image",
-        "gcr.io/de2022-rrd/prediction-ui-embedded-gcs:9.9.9",
+        "gcr.io/data-engineering-jads/prediction-ui-embedded-gcs:9.9.9",
         "--region",
-        "us-central1",
+        "us-west1",
         "--platform",
         "managed",
         "--allow-unauthenticated",
