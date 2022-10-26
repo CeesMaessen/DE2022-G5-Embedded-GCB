@@ -13,7 +13,7 @@
        "name": "gcr.io/cloud-builders/docker",
        "args": [
            "push",
-           "gcr.io/data-engineering-jads/a1-executor:9.9.9"
+           "gcr.io/data-engineering-jads/a1-executor:9.9.8"
         ]
    }
    ]
