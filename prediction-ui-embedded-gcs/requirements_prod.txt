@@ -5,3 +5,4 @@ numpy
 tensorflow
 h5py
 six
+joblib
