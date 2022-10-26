@@ -35,7 +35,7 @@
         "--image",
         "gcr.io/data-engineering-jads/prediction-ui-embedded-gcs:9.9.9",
         "--region",
-        "us-west1",
+        "us-central1",
         "--platform",
         "managed",
         "--allow-unauthenticated",
