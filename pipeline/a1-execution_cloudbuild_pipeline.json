@@ -9,7 +9,7 @@
         ]
    },
    {
-       "name": "gcr.io/$PROJECT_ID/a1-executor:9.9.9",
+       "name": "gcr.io/$PROJECT_ID/a1-executor:9.9.8",
        "args": [
            "--name=heart-attack-predictor-pipeline",           
 		   "--pipeline_def=./pipeline/heart_attack_training_pipeline.json",

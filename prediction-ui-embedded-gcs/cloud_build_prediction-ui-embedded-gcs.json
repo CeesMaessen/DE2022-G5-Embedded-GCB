@@ -14,7 +14,7 @@
       "args": [
         "build",
         "-t",
-        "gcr.io/data-engineering-jads/prediction-ui-embedded-gcs:9.9.9",
+        "gcr.io/data-engineering-jads/prediction-ui-embedded-gcs:9.9.8",
         "./prediction-ui-embedded-gcs"
       ]
     },
@@ -22,7 +22,7 @@
       "name": "gcr.io/cloud-builders/docker",
       "args": [
         "push",
-        "gcr.io/data-engineering-jads/prediction-ui-embedded-gcs:9.9.9"
+        "gcr.io/data-engineering-jads/prediction-ui-embedded-gcs:9.9.8"
       ]
     },
     {
@@ -33,7 +33,7 @@
         "deploy",
         "prediction-service",
         "--image",
-        "gcr.io/data-engineering-jads/prediction-ui-embedded-gcs:9.9.9",
+        "gcr.io/data-engineering-jads/prediction-ui-embedded-gcs:9.9.8",
         "--region",
         "us-central1",
         "--platform",
