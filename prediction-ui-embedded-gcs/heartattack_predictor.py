@@ -24,7 +24,7 @@ class HeartAttackPredictor:
         df_dummified = pd.get_dummies(df[cat_cols].astype(pd.CategoricalDtype(categories=catvals)))
         df = pd.concat([df, df_dummified], axis = 1)
         cols_to_drop = cat_cols + ['sex_0','sex_2','sex_3','exng_0','exng_2','exng_3','caa_0','cp_0','fbs_0','fbs_2', 'fbs_3','restecg_0','restecg_3', 'slp_0', 'slp_3', 'thall_0']
-        df.drop(columns = cols_to_drop)
+        df = df.drop(columns = cols_to_drop)
 
         # instantiate the scaler
         scaler = RobustScaler()
