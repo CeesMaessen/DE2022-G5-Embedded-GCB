@@ -1,2 +1,2 @@
-# DE2022-G3
+# DE2022-GROUP 3
 MSc DSBE - Data Engineering - Group 3
