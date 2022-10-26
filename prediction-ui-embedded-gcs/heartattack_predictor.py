@@ -17,10 +17,10 @@ class HeartAttackPredictor:
         model_name = os.environ.get('MODEL_NAME', 'Specified environment variable is not set.')
         if self.model is None:
             self.model = joblib.load(model_name)
-            
+
         df = pd.read_json((prediction_input).to_json(), orient='records')
 
-        pd.get_dummies(df, columns = cat_cols, drop_first = True)
+        df = pd.get_dummies(df, columns = cat_cols, drop_first = True)
 
         # instantiate the scaler
         scaler = RobustScaler()
