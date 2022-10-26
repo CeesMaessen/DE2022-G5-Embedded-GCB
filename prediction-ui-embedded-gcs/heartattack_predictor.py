@@ -1,8 +1,7 @@
 import json
 import os
-from flask import jsonify
 import pandas as pd
-from keras.models import load_model
+import joblib
 
 
 class HeartAttackPredictor:
@@ -13,7 +12,7 @@ class HeartAttackPredictor:
         print(prediction_input)
         model_name = os.environ.get('MODEL_NAME', 'Specified environment variable is not set.')
         if self.model is None:
-            self.model = load_model(model_name)
+            self.model = joblib.load(model_name)
         print(json.dumps(prediction_input))
         df = pd.read_json(json.dumps(prediction_input), orient='records')
         print(df)
