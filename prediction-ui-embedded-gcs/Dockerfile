@@ -11,7 +11,7 @@ COPY . .
 # Expose the port that our app runs in
 EXPOSE 5000
 # Enviroment Variables
-ENV MODEL_NAME=svc_model.h5
+ENV MODEL_NAME=svc_model.pkl
 # Run our App
 CMD ["python3","app.py"]
 # We can also use an ENTRYPOINT and a CMD
