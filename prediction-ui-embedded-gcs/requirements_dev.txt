@@ -7,3 +7,4 @@ h5py
 six
 pytest
 joblib
+sklearn

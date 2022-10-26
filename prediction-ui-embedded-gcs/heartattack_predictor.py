@@ -2,7 +2,7 @@ import json
 import os
 import pandas as pd
 import joblib
-
+import sklearn
 
 class HeartAttackPredictor:
     def __init__(self):
