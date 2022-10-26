@@ -27,7 +27,8 @@ def predict_heartattack():
                 "chol": float(request.form.get("chol")),
                 "thallachh": float(request.form.get("thallachh")),
                 "oldpeak": float(request.form.get("oldpeak")),
-                "age": int(request.form.get("age"))
+                "age": int(request.form.get("age")),
+                "sex": int(request.form.get("sex"))
             }
         ]
         print(prediction_input)
