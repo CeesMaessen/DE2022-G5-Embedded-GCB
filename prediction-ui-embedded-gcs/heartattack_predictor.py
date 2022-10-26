@@ -30,7 +30,7 @@ class HeartAttackPredictor:
         scaler = RobustScaler()
 
         # scaling the continuous features
-        df_dummified[con_cols] = scaler.fit_transform(df[con_cols])
+        df[con_cols] = scaler.fit_transform(df[con_cols])
 
-        y_pred = self.model.predict(df_dummified)
+        y_pred = self.model.predict(df)
         return y_pred
