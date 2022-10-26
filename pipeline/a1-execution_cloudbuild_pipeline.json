@@ -13,7 +13,7 @@
        "args": [
            "--name=heart-attack-predictor-pipeline",           
 		   "--pipeline_def=./pipeline/heart_attack_training_pipeline.json",
-           "--pipeline_root=gs://dtemp_a1",         
+           "--pipeline_root=gs://de_cees_temp",         
 		   "--parameter_dict=./parameters.json"
         ]
    }
