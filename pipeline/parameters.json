@@ -1,6 +1,6 @@
 {
-    "project_id": "de2022-rrd",
-    "data_bucket": "data_a1",
+    "project_id": "data-engineering-jads",
+    "data_bucket": "data_cees",
     "dataset_filename": "heart.csv",
-    "model_repo":"dmodel_a1"
+    "model_repo":"model_cees"
 }
