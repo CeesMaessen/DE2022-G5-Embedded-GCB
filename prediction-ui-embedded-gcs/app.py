@@ -25,7 +25,7 @@ def predict_heartattack():
                 "thall": int(request.form.get("thall")),
                 "trtbps": float(request.form.get("trtbps")),
                 "chol": float(request.form.get("chol")),
-                "thallachh": float(request.form.get("thallachh")),
+                "thalachh": float(request.form.get("thalachh")),
                 "oldpeak": float(request.form.get("oldpeak")),
                 "age": int(request.form.get("age")),
                 "sex": int(request.form.get("sex"))
